@@ -1,0 +1,40 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: consumer-server
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: ${nacos.server-addr}
+      config:
+        username: ${nacos.username}
+        password: ${nacos.password}
+      discovery:
+        username: ${nacos.username}
+        password: ${nacos.password}
+    sentinel:
+      web-context-unify: false
+      transport:
+        dashboard: ${sentinel.dashboard}
+        clientIp: ${sentinel.clientIp}
+
+seata:
+  registry:
+    type: nacos
+    nacos:
+      server-addr: ${nacos.server-addr}
+      namespace: ""
+      group: SEATA_GROUP # 分组名称
+      application: seata-server # tc服务在nacos中的服务名称
+      username: nacos
+      password: nacos
+  tx-service-group: test-seata-group
+  service:
+    vgroup-mapping: # 事务组与cluster的映射关系
+      test-seata-group: default
+
+
+
