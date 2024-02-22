@@ -35,6 +35,7 @@ seata:
   service:
     vgroup-mapping: # 事务组与cluster的映射关系
       test-seata-group: default
+  data-source-proxy-mode: XA # 其他模式需要其他配置
 
 
 
