@@ -54,13 +54,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- 数据库驱动包管理 -->
+            <!-- mysql 数据库驱动包管理 -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-            <!-- mybatis plus 管理 -->
+            <!-- mybatis plus  -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>

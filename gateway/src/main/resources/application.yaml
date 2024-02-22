@@ -8,10 +8,10 @@ spring:
     active: dev
   cloud:
     nacos:
-      server-addr: ${nacos.server-addr}
+      server-addr: ${mata.nacos.server-addr}
       discovery:
-        username: ${nacos.username}
-        password: ${nacos.password}
+        username: ${mata.nacos.username}
+        password: ${mata.nacos.password}
     gateway:
       routes: #网关路由配置
         - id: producer-server #路由id，自定义，只要唯一即可
